@@ -28,6 +28,9 @@ function findAndRenderPokemonsByType(){
 
   let $pokeInputType = $('input#pokemonType')
   const pokeType = $pokeInputType.val()
+  $("#pokeimage").html("")
+  $("#pokemonlist").html("")
+  $("#poketypelist").html("")
 
   $.ajax({
     url: `${POKETYPEURL}${pokeType}/`,
@@ -40,7 +43,9 @@ function findAndRenderPokemonsByType(){
 function findAndRenderPokemons(){
   const BASEURL = 'http://pokeapi.co/api/v2/'
   const POKENAMEURL = 'http://pokeapi.co/api/v2/pokemon/'
-
+  $("#pokeimage").html("")
+  $("#pokemonlist").html("")
+  $("#poketypelist").html("")
   let $pokeInput = $('input#pokemonInput')
   let pokeName = $pokeInput.val().toLowerCase().replace(/^\s+|\s+$/g, '')
 
