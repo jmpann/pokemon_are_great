@@ -8,6 +8,9 @@
     </script>
     <script type="text/javascript" src='index.js'>
     </script>
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
   </head>
   <body>
     <nav>
@@ -16,24 +19,38 @@
       </div>
     </nav>
     <div class="container">
-
       <div class="row">
-        <div class="col s4">
+        <div class="valign-wrapper">
+        <!--Submission Form -->
+        <div class="col m4">
           <h1>Pokemon!</h1>
           <form id="pokemon-form">
             <input type="text" id="pokemonInput" value="">
             <input type="submit" name="" value="Search for a pokemon">
           </form>
           <form id="type-form">
-            <input type="text" id="type" value="">
+            <input type="text" id="pokemonType" value="">
             <input type="submit" name="" value="Search for a pokemon type">
           </form>
         </div>
+  <!-- Render Results from searching for a specific pokemon -->
 
-        <div class="col s8">
-          <ul id="pokelist" class='collection js--poke-list'>
+
+      <div class="col m4 ">
+        <div id="pokeimage"></div>
+      </div>
+        <div class="col m4">
+          <ul id="pokemonlist" class='collection js--onepoke-list'>
           </ul>
         </div>
       </div>
+      </div>
+  <!-- Render results from seaching for a specific type -->
+
+        <div class="col m4">
+          <ul id="poketypelist" class='collection js--poketype-list'>
+          </ul>
+        </div>
+    </div>
   </body>
 </html>
